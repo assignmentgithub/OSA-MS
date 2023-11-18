@@ -1,0 +1,171 @@
+User MS
+
+public class User {
+    private long id;
+    private String username;
+    private String email;
+    private String password;
+    private String name;
+    }
+
+User Registration:
+POST /api/users/register
+
+User login:
+POST /api/users/login
+
+User profile:
+* Get user profile:
+GET /api/users/{user_id}/profile
+* Update user profile:
+PUT /api/users/{user_id}/profile
+
+User address
+* Get user address:
+GET /api/users/{user_id}/addresses
+* Add new address
+POST /api/users/{user_id}/addresses
+*Update address
+PUT /api/users/{user_id}/addresses/{address_id}
+*Delete address
+DELETE /api/users/{user_id}/addresses/{address_id}
+
+User orders
+* Get user orders
+GET /api/users/{user_id}/orders
+* Get specific order detais
+GET /api/users/{user_id}/orders/{order_id}
+* Place an order
+POST /api/users/{user_id}/orders
+
+User Wishlist
+* Get users wishlist
+GET /api/users/{user_id}/wishlist
+* Add to wishlist
+POST /api/users/{user_id}/wishlist
+* Remove from the wishlist
+DELETE /api/users/{user_id}/wishlist/{product_id}
+
+
+Order MS
+
+public class Order {
+    private String orderId;
+    private String userId; 
+    private List<Product> products;
+    private double totalPrice;
+    private Date orderDate;
+    private OrderStatus status;
+
+Get order by ID:
+GET /api/orders/{order_id}
+
+Create a new order
+POST /api/orders
+
+Update order status
+PUT /api/orders/{order_id}/status
+
+Get user's orders
+GET /api/orders/user/{user_id}
+
+Get orders by status
+GET /api/orders/status/{status}
+
+Cancel an order
+DELETE /api/orders/{order_id}
+
+Get order invoice/Receipt
+GET /api/orders/{order_id}/invoice
+
+
+Stock MS
+
+public class stock {
+    private String productId;
+    private String name;
+    private String description;
+    private double price;
+    private String category;
+
+Get all products
+GET /api/products
+
+Get product by ID
+GET /api/products/{product_id}
+
+Create a new product
+POST /api/products
+
+Update product information
+PUT /api/products/{product_id}
+
+Delete product
+DELETE /api/products/{product_id}
+
+Search products by category
+GET /api/products/category/{category_name}
+
+Search product by keyword
+GET /api/products/search?keyword={search_keyword}
+
+
+
+Vivek----
+
+USER MS
+
+EndPoints:
+Get/users - - to fetch all users
+Get/users/{userId} – to fetch single user
+Post/users – to save users
+Update/users/{userId} – to update user info
+Delete/users/{userId} - - to delete user
+
+Entity:
+String userId;
+String firstName;
+String lastName;
+Long mobileNumber;
+
+ORDER MS
+
+EndPoints:
+Get/orders - - to fetch all orders
+Get/orders/users/{userId} - - to fetch all orders for specific user
+Get/orders/{orderId} – to fetch single orders
+Get/orders/{id}/{status} – to fetch single orders with status
+Post/orders – to save users
+Update/orders/{id} – to update orders info
+Delete/orders/{id} - - to delete orders
+
+Entity:
+
+String orderId;
+String userId;
+List<OrderItem> orderItems;
+double totalPrice;
+String status;
+
+OrderItem:
+String orderItemId;
+String productId;
+String productName;
+int quantity;
+double pricePerUnit;
+
+Stock MS
+
+String stockIdId;
+String productId;
+String productName;
+int quantity;
+double price;
+
+Get/Stocks - - to fetch all orders
+Get/Stocks/{stockId} – to fetch single orders
+Get/Stocks/{productName} – to fetch single orders
+Get/Stocks/{productId} – to fetch single orders
+Get/Stocks/{id}/{status} – to fetch single orders
+Post/Stocks – to save users
+Update/Stocks/{id} – to update orders info
