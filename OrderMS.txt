@@ -1,0 +1,171 @@
+OrderMS
+
+----------User Stories: ----------------------
+
+1. As a User, I can view product details:
+   * I want to see detailed information about a product including description, price, images, and available sizes/colors.
+
+2. As a User, I can add items to my shopping cart:
+   * I want to select multiple products and add them to my cart for later purchase.
+
+3. As a User, I can manage my shopping cart:
+   * I want to adjust quantities, remove items, or move items to wishlists from my cart.
+
+4. As a User, I can proceed to checkout:
+   * I want to review my selected items, select shipping options, and proceed to payment.
+
+5. As a User, I can view my order history:
+   * I want to see a list of my previous orders with details like order date, items purchased, and order status.
+
+6. As a User, I can track my orders:
+   * I want to track the status of my current orders including processing, shipping, and delivery details.
+
+7. As a Customer Support Representative, I can manage orders:
+   * I want to view, modify, or cancel orders placed by customers.
+
+8. As a Warehouse Manager, I can manage inventory:
+   * I want to update stock levels, receive notifications for low stock items, and manage product availability.
+
+9. As a System Admin, I can configure order processing rules:
+   * I want to set up rules for order processing, including payment gateways, shipping methods, and order validation criteria.
+
+10. As a User, I can leave reviews and ratings:
+   * I want to provide feedback on products I've purchased.
+
+11. As a User, I can initiate returns or exchanges:
+   * I want to easily request returns or exchanges for items I've received.
+
+
+----------Acceptance Criteria: -----------------
+
+1. View Product Details:
+
+   * Product page displays accurate and updated information about the item.
+   * Images showcase various angles and details of the product.
+   * Price, description, sizes, colors, and availability are clearly listed and updated in real-time.
+
+2. Add Items to Shopping Cart:
+
+   * Users can add multiple items to the cart from different product pages.
+   * Quantity selection, size, and color options are available where applicable.
+   * Confirmation message appears upon successful addition of items to the cart.
+
+3. Manage Shopping Cart:
+
+   * Users can adjust item quantities, remove items, or move them to a wishlist.
+   * Changes in the cart reflect immediately without requiring a page refresh.
+   * Cart updates are reflected consistently across different devices when logged in.
+
+4. Proceed to Checkout:
+
+    * Users can review selected items, their quantities, and total costs.
+    * Shipping options are presented, showing estimated delivery time and cost.
+    * Transition to the payment page occurs smoothly upon user confirmation.
+
+5. View Order History:
+
+    * Users can access a chronological list of their past orders.
+    * Each order entry displays order date, items purchased, prices, and order status.
+    * Clicking on an order provides detailed order information, including tracking details if available.
+
+6. Track Orders:
+
+    * Users can track the progress of their orders from processing to delivery.
+    * Order status updates automatically or on manual refresh, providing clear details about shipment/tracking.
+
+7. Manage Orders (Customer Support Representative):
+
+    * Customer support representatives can view orders by searching for specific order IDs or customer details.
+    * Modification or cancellation of orders is possible within a specified time frame after order placement.
+    * Status updates or notifications are sent to users affected by any changes made to their orders.
+
+8. Manage Inventory (Warehouse Manager):
+
+    * Inventory updates automatically upon successful orders or returns.
+    * Low stock alerts trigger for items below a predefined threshold.
+    * Real-time synchronization of inventory levels across the system.
+
+9. Configure Order Processing Rules (System Admin):
+
+    * Admins can set up payment gateways, configure shipping methods, and define order validation criteria.
+    * Changes to these configurations reflect accurately and promptly across the system.
+
+10. Leave Reviews and Ratings:
+
+    * Users can submit reviews/ratings only for purchased items.
+    * Reviews display along with the product and are visible to other users.
+    * Moderation tools are available for managing inappropriate content.
+
+11. Initiate Returns or Exchanges:
+
+    * Users can initiate returns or exchanges from their order history or specific order details page.
+    * Clear instructions and return shipping labels are provided upon return/exchange initiation.
+    * Status updates are provided throughout the return/exchange process.
+
+------------Test Scenario: -------------
+
+1. View Product Details:
+
+   * Verify that all product information (price, description, images, sizes, colors) loads correctly on the product page.
+   * Check if the images are clear, high-quality, and represent the product accurately.
+   * Test if changes in availability (e.g., out of stock) are reflected immediately upon user interaction.
+
+2. Add Items to Shopping Cart:
+
+   * Confirm that items are successfully added to the cart from different product pages.
+   * Verify that the selected quantity, size, and color (if applicable) match the chosen items.
+   * Test if items persist in the cart even after navigating to other sections of the app.
+
+3. Manage Shopping Cart:
+
+   * Ensure that users can modify quantities, remove items, or move them to a wishlist without errors.
+   * Confirm that changes made to the cart are immediately updated and reflected in the cart total.
+   * Check if changes made on one device (e.g., desktop) are synced and visible on another device (e.g., mobile) when logged in.
+
+4. Proceed to Checkout:
+
+   * Test the transition from the shopping cart to the checkout page, ensuring all selected items are listed accurately.
+   * Verify that shipping options (e.g., standard, express) are available and display relevant information such as costs and delivery times.
+   * Test the navigation flow from checkout to the payment page, ensuring a smooth transition.
+
+5. View Order History:
+
+   * Verify that the order history page displays a chronological list of previous orders for the logged-in user.
+   * Click on specific orders to ensure detailed information (items purchased, prices, status) is correctly displayed.
+   * Check if the order history is paginated or offers a search/filter functionality for easier navigation.
+
+6. Track Orders:
+
+   * Test order tracking by placing an order and verifying its status updates accurately from processing to delivery.
+   * Confirm that users receive timely notifications or updates regarding order status changes.
+   * Verify the accuracy of shipment/tracking information displayed on the user's account.
+
+7. Manage Orders (Customer Support Representative):
+
+   * Confirm that customer support representatives can search for specific orders using order IDs or customer details.
+   * Test order modification or cancellation within the permitted time frame, ensuring accurate updates for affected users.
+   * Verify that users receive notifications or status updates for any modifications made to their orders.
+
+8. Manage Inventory (Warehouse Manager):
+
+   * Confirm that inventory levels are updated accurately upon order placements or returns/exchanges.
+   * Trigger low stock scenarios to validate the system's ability to generate alerts appropriately.
+   * Verify real-time synchronization of inventory levels across different modules of the system.
+
+9. Configure Order Processing Rules (System Admin):
+
+   * Validate that admins can configure payment gateways, shipping methods, and order validation criteria without errors.
+   * Verify that changes made by admins reflect accurately and promptly throughout the system.
+   * Test the system's response to various configurations and ensure consistent behavior.
+
+10. Leave Reviews and Ratings:
+
+   * Ensure users can submit reviews and ratings only for products they have purchased.
+   * Check if submitted reviews are displayed alongside the respective products and visible to other users.
+   * Test moderation tools to ensure inappropriate content is handled appropriately.
+
+11. Initiate Returns or Exchanges:
+
+   * Verify that users can initiate returns or exchanges from their order history or specific order details page.
+   * Test the return/exchange process step-by-step, ensuring users receive clear instructions and shipping labels.
+   * Check for status updates and notifications throughout the return/exchange process.
